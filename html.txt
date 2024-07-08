@@ -1,0 +1,171 @@
+html
+
+<!DOCTYPE html>
+
+<html lang="el">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Κινούμενο Μενού Καφετέριας</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background-color: #f3f3f3;
+
+            margin: 0;
+
+            padding: 0;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: 100vh;
+
+        }
+
+        .menu {
+
+            background-color: #fff;
+
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+            border-radius: 8px;
+
+            overflow: hidden;
+
+            width: 90%;
+
+            max-width: 400px;
+
+        }
+
+        .menu-item {
+
+            padding: 15px 25px;
+
+            text-align: center;
+
+            font-size: 18px;
+
+            color: #333;
+
+            cursor: pointer;
+
+            position: relative;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+        }
+
+        .menu-item:not(:last-child) {
+
+            border-bottom: 1px solid #eaeaea;
+
+        }
+
+        .menu-item:hover {
+
+            background-color: #f7f7f7;
+
+        }
+
+        .menu-item::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+
+            bottom: 0;
+
+            height: 3px;
+
+            width: 100%;
+
+            background-color: #ff6347;
+
+            transform: scaleX(0);
+
+            transform-origin: right;
+
+            transition: transform 0.3s ease;
+
+        }
+
+        .menu-item:hover::after {
+
+            transform: scaleX(1);
+
+            transform-origin: left;
+
+        }
+
+        .menu-item .price {
+
+            font-size: 16px;
+
+            color: #666;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="menu">
+
+        <div class="menu-item">
+
+            <span>Καφές</span>
+
+            <span class="price">€3.00</span>
+
+        </div>
+
+        <div class="menu-item">
+
+            <span>Τσάι</span>
+
+            <span class="price">€2.50</span>
+
+        </div>
+
+        <div class="menu-item">
+
+            <span>Γλυκά</span>
+
+            <span class="price">€4.00</span>
+
+        </div>
+
+        <div class="menu-item">
+
+            <span>Σνακ</span>
+
+            <span class="price">€5.00</span>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
